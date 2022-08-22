@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>traffic</title>
+            <style>
+                body {background-color: #F9F6EE;}
+                h1 {text-align: center; font-family: Trebuchet MS; font-size: 40px;  color: #331A00;}
+                h2 {text-align: center; font-family: Palatino; font-size: 20px;  color: #331A00;}
+                h3 {text-align: center; font-family: Trebuchet MS; font-size: 35px; margin: 20px 0px 20px 0px; color: #331A00;}
+                h4 {font-family: Trebuchet MS; font-size: 25px; margin: 10px 0px 0px 58px; color: #331A00;}
+                h5 {font-family: Trebuchet MS; font-size: 20px; margin: 10px 0px 0px 78px; color: #331A00;}
+                p {font-family: Palatino;font-size: 20px; margin: 10px 63px 0px 63px; color: #331A00;}
+                button.nav {border-right: solid; border-width: 1px; font-family: Palatino; font-size: 14px; color: #331A00;}
+                figcaption.center {text-align: center; font-family: Palatino; font-size: 14px; color: #331A00;}
+                div.interface-col {float: left; width: 30%; margin-left: 3.3%; margin-top: 3%; margin-bottom: 3%; margin-right: 0%;}
+                div.head-col-left {float: left; width: 33%;}
+                div.head-col-right {float: right; width: 60%;}
+                div.row:after {content: ""; display: table; clear: both;}
+                div.content {position:relative; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); top:50%;}
+                div.header {background-color: #E5E4E2; border-style: solid; border-width: .5px; margin: 20px 0px 10px 0px;}
+                div.left-text-col {float: left; width: 63%;}
+                div.right-pic-col {float: right; width: 37%; text-align: center;}
+                div.right-text-col {float: right; width: 63%;}
+                div.left-pic-col {float: left; width: 37%; text-align: center;}
+                div.pic-center {text-align: center; margin: 20px 0px 20px 0px;}
+                hr.code {width: 20%;}
+                hr.big {height: 2px; background-color: #C0C0C0; width: 80%; margin-top: 15px;}
+                hr.left {width: 70%; margin-top: 15px; margin-bottom: 15px; text-align: left;}
+                hr.right {width: 70%; margin-top: 15px; margin-bottom: 15px; text-align: right;}
+                p.about {float: right; font-size: 15px; margin: 5px 10px 5px 0px;}
+                a:link, a:visited {color: #264D73;}
+                a:hover, a:active {color: #2D2D86;}
+            </style>
+        </head>
+        
+        <div class="topnav" style="float: right">
+            <button id="home" class="nav">Home</button>
+            <button id="education" class="nav">Education</button>
+            <button id="ratscrew" class="nav">Ratscrew</button>
+            <button id="lang" class="nav">Lang</button>
+            <button id="traffic" class="nav">Traffic Lights</button>
+            <button id="reddit" class="nav">Reddit</button>
+        </div>
+        
+        <body>
+            <div class="header">
+                <h1>Traffic Light Identification</h1>
+                <h2><a href="https://github.com/gwen-sarapata/traffic" target="_blank">Traffic Git</a></h2>
+            </div>
+
+            <!-- About section -->
+            <div class="main">
+                <h3>About</h3>
+                <p>The Traffic Light Identification project to satisfy Oxy&#39s comps requirement. This was part of a two semester project where the first semester was spent researching about the project and determining what we needed to learn, while the second semester was spent implenting the project.</p>
+                <p>In order to pass comps for the Computer Science department, we had to pick a unique project that the department chair felt was complicated enough to showcase our talents.</p>
+                <p>Originally, I was planning on only recognizing one singlar traffic light, however it was changed to indentify several that were in the same image to further complicate the project. This is intended to be a very small portion of self-driving cars that has not been solved very many times</p>
+            </div>
+            <hr class="big">
+            <div class="main">
+                <h3>Research</h3>
+                <!-- Talking about the learning -->
+                <div class="sub">
+                </div>
+                
+                <div class="row">
+                    <div class="left-text-col">
+                        <!-- Talking about the learning -->
+                        <h4>Decision Making</h4>
+                        <p>Before this project, I had never learning anything about AI. I quickly learned that the majority of AI projects were coded in Python. Since I had not worked with Python either, I needed to learn Python over the summer to be able to execute the project in the fall.</p>
+                        <p>I also needed to decide what type of artifical intelligence I was going to use. I decided to use an artifical neural network, which is intended to mimick a human&#39s nueral network. The reason why I chose to use a neural network is because they work by recognizing patterns and are commenly used in image recognition.</p>
+                        <p>Another factor I needed to decide on was which platform to use for the project. The two I looked into were PyTorch and TensorFlow. I decided touse TensorFlow, since it has better visualization techniques which allows for easier debugging. Since I never programmed a neural network, easier debugging was essential to me.</p>
+                        <hr class="left">
+                        <!-- Describing the dataset -->
+                        <h4>The Dataset</h4>
+                        <p>While researching for this project, it became very apparent that finding a large enough dataset was critcal. Although I had never worked with any for of artifical intelligence, I learned that building a neural network required as many images as possible for a more accurate network. Luckily i found a <a href="https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset">dash cam data set</a> that featured over 43,000 images and over 118,000 annotated traffic lights.</p>
+                    </div>
+                    <div class="right-pic-col" style="margin-top: 2%;">
+                        <img src="Photos/dashcam.jpg"
+                            width=80%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Example Image from Dataset</figcaption>
+                    </div>
+                </div>
+            </div>
+            <hr class="big">
+            
+            <!-- Overfitting -->
+            <div class="main">
+                <h3>Overfitting</h3>
+                <p>A very common problem with neural networks is overfitting. Overfitting is caused when the neural network starts learning noise in the training data. This causes the neural network to very accurately determine the output for the training data, but when it looks at validation or testing data, it&#39s not accurate. This is a major problem, because this means that the neural network is not actually learning the patterns in the images.</p>
+                <p>A lot of things I decided to implement in my code where to combat overfitting. Near the beginning, my code was over fitted so much that the training data was getting a 100 percent accuracy, while the validation data was getting 0 percent.</p>
+            </div>
+            <hr class="big">
+            
+            <!-- Talking about implentation -->
+            <div class="main">
+                <h3>Implementation</h3>
+            
+                <!-- Talking about pre-processing -->
+                <div class="row">
+                    <div class="left-text-col" style="margin-top: 2%;">
+                        <h4>Image Pre-processing</h4>
+                        <p>The image pre-processing set I decided to take was to cut the images in half. Since the photos were taken from a dashcam, then the traffic lights should never be in the bottom half of the image. In order to do this, I replaced the bottom half of the images with black pixels. This step was added to cut down on training time.</p>
+                        <p>The image pre-processing step only applied to the training images because the validation images should be unedited in order to determine if the neural network truely recognizes traffic lights.</p>
+                    </div>
+                    <div class="right-pic-col">
+                        <img src="Photos/dashcam-processed.jpg"
+                            width=75%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Pre-processed Image</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+            
+                <!-- Getting the labels -->
+                <div class="row">
+                    <div class="right-text-col" style="margin-top: 7%;">
+                        <h4>Locating Labels</h4>
+                        <p>Another step before building the model involved getting the labels from the dataset. This invloved traversing throught the correct files and getting all the annotations.</p>
+                        <p>The main setback that happened during this process was reading the csv file. Pandas has a method to read a csv file, but they usually separate the sections using commas, while this dataset was seperated by semi-colon. I made the mistake of not reading the documentation before realizing that i could set the seperation charater to a semi-colon, which made this method fairly straight-forward.</p>
+                    </div>
+                    <div class="left-pic-col">
+                        <img src="Photos/labels.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Main Label Method</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+                
+                <!-- Getting the Images -->
+                <div class="row">
+                    <div class="left-text-col">
+                        <h4>Loading the Images</h4>
+                        <p>The final step before I could start building the model involved loading the images so that they could be used by the neural network. The way I decided to dothis was by using an ImageDataGenerator. This is a useful augmentation method because it allows us to include options that combat overfitting. This includes shifting the images slightly left/right or up/down and changing the brightness of the images. An ImageDataGenerator also allows us to split the data into training and validation sets and use our image pre-processing function.</p>
+                    </div>
+                    <div class="right-pic-col" style="margin-top: 1%">
+                        <img src="Photos/data-gen.jpg"
+                            width=97%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Setting up the ImageDataGenerator</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+                
+                <!-- Seperating the Sets-->
+                <div class="row">
+                    <div class="right-text-col" style="margin-top: 2%">
+                        <h4>Setting up Data Generators</h4>
+                        <p>In order to use the images, I then used the method flow_from_dataframe. I used this method to get the images from the previous created to be used by TensorFlow. This is the step where I set up the images with the annotations. I gave the method the 6 possible annotations which are: go, stop, warning, goLeft, stopLeft, and warningLeft. This is also the step where I seperated the training generator from the validation generator.</p>
+                    </div>
+                    <div class="left-pic-col">
+                        <img src="Photos/training-gen.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Training Data Generator Setup</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+            
+                <!-- Building the Model -->
+                <div class="row">
+                    <div class="left-text-col" style="margin-top: 2%;">
+                        <h4>Building the Model</h4>
+                        <p>Building the model us the most important step of the entire process. This decides how the neural network thinks. Building models for neural networks are still currently being explored for optimal performance, especially for a fairly new topic like multiple traffic light indetification. For this model, I decided to use a convolutional neural network, which are designed to process pixel data. To build the model, I used two 2D convolutional layers. I followed this with a dropout layer. This helps remove noise from the network and also combats overfitting. This was followed by a max pooling layer. This layer highlights features in the images, which is commonly used after a convolutional layer. This is followed by a flatten layer and dense layer to format the output correctly. I tried to keep this network small as the more layers you add, the more likely your data is to overfit.</p>
+                        <p>The activation function is a very important piece of this method. I am using the sigmoid activation, which gives a probability for each output, and is good to use with multible labels.</p>
+                    </div>
+                    <div class="right-pic-col">
+                        <img src="Photos/model.jpg"
+                            width=97%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Build Model Method</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+                
+                <!-- Compiling the Model -->
+                <div class="row">
+                    <div class="right-text-col">
+                        <h4>Compiling the Model</h4>
+                        <p>When you compile the model, you define the loss function, the optimizer, and the metrics. The optimizer that I used is Adam. The Adam optimizer combines two gradient descent methodologies. This is a newer optimizer, but had become popular recently. I chose binary crossentropy as the loss function because it compares each of the predicted probabilities to an actual class output which can be either 0 or 1. This is used with the sigmoid activation. The current metric that I am evaluating is accuracy.</p>
+                    </div>
+                    <div class="left-pic-col">
+                        <img src="Photos/compile.jpg"
+                            width=80%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Compiling the Model</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+                
+                <!-- Fitting the model -->
+                <div class="row">
+                    <div class="left-text-col">
+                        <h4>Testing the Model</h4>
+                        <p>The final step in this program is to fit the model. This is where the model is actually trained and validated. This step can take hours to complete. It will show you data for each epoch that it completes. An epoch is where each sample in the dataset has opportunities to update the internal model parameters. There are often a large number of epochs as using too little can cause your program to not be as accurate as it could be. I am currently using 50 epochs.</p>
+                    </div>
+                    <div class="right-pic-col">
+                        <img src="Photos/fit.jpg"
+                            width=80%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Fitting the Model</figcaption>
+                    </div>
+                </div>
+            </div>
+            <hr class="big">
+            
+            <!-- Outcome of the neural network -->
+            <div class="main">
+                <h3 style="text-align: center;">Outcome</h3>
+                <p>The final accuracy of this project was about 60% with training data and about 50% with validation data. At the beginning of the project, I was hoping to get a higher accuracy, but I am proud of where this project ended up. I had to stop working on it as I got an M1 laptop, which TensowFlow is not currently compatable with. I am glad that in the end, I was able to mostly get over overfitting as the training accuracy is not very significantly about the validation accuracy, which is something I struggled with greatly during this project.</p>
+                <p>It is also important to keep in mind that this field in neural networks is still a hot topic that only mostly large companies have figured out. Google has a slef-driving car that can recognize street lights, butthey used CAPATCHA testing to help train their AI. Most car companies offer driving assistance, but almost none can navigate city streets. Part of this is probably because we need to get a very accurate traffic light identification for self-driving to be used on city streets. Even in Teslas, which have more advanced driving assistance capabilites than most companies, have issues with this. Sometimes the sun in the perfect spot can be mis-identified as a yellow light. Mis-identifying lights can be very dangerous in self-driving cars because a car slowing down randomly can cause accidents.</p>
+                <p>I look forward to see how this industry grows in the future.</p>
+                <div class="pic-center">
+                    <img src="Photos/output.jpg"
+                        width=70%
+                        margin=auto
+                        display=block>
+                        <figcaption class="center">Accuracy Example</figcaption>
+                </div>
+            </div>
+            <hr class="big">
+        </body>
+        
+        <footer>
+            <p class="about"><a href="../about.html">About This Website</a></p>
+        </footer>
+    </html>
+
+<script type="text/javascript">
+    document.getElementById("home").onclick = function() {
+        location.href = "../home.html";
+    };
+    document.getElementById("education").onclick = function() {
+        location.href = "../education.html";
+    };
+    document.getElementById("ratscrew").onclick = function() {
+        location.href = "ratscrew.html";
+    };
+    document.getElementById("lang").onclick = function() {
+        location.href = "lang.html";
+    };
+    document.getElementById("traffic").onclick = function() {
+        location.href = "traffic.html";
+    };
+    document.getElementById("reddit").onclick = function() {
+        location.href = "reddit.html";
+    };
+</script>

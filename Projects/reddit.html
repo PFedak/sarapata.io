@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>reddit</title>
+            <style>
+                body {background-color: #F9F6EE;}
+                h1 {text-align: center; font-family: Trebuchet MS; font-size: 40px;  color: #331A00;}
+                h2 {text-align: center; font-family: Palatino; font-size: 20px;  color: #331A00;}
+                h3 {text-align: center; font-family: Trebuchet MS; font-size: 35px; margin: 20px 0px 20px 0px; color: #331A00;}
+                h4 {font-family: Trebuchet MS; font-size: 25px; margin: 10px 0px 0px 58px; color: #331A00;}
+                h5 {font-family: Trebuchet MS; font-size: 20px; margin: 10px 0px 0px 78px; color: #331A00;}
+                p {font-family: Palatino;font-size: 20px; margin: 10px 63px 0px 63px; color: #331A00;}
+                button.nav {border-right: solid; border-width: 1px; font-family: Palatino; font-size: 14px; color: #331A00;}
+                figcaption.center {text-align: center; font-family: Palatino; font-size: 14px; color: #331A00;}
+                div.interface-col {float: left; width: 30%; margin-left: 3.3%; margin-top: 3%; margin-bottom: 3%; margin-right: 0%;}
+                div.col-left {float: left; width: 45%;}
+                div.col-right {float: right; width: 45%;}
+                div.row:after {content: ""; display: table; clear: both;}
+                div.content {position:relative; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); top:50%;}
+                div.header {background-color: #E5E4E2; border-style: solid; border-width: .5px; margin: 20px 0px 10px 0px;}
+                div.pic-center {text-align: center; margin: 20px 0px 20px 0px;}
+                div.left-text-col {float: left; width: 60%;}
+                div.right-pic {float: right; width: 40%; text-align: center; margin-top: 1%;}
+                div.right-text-col {float: right; width: 60%;}
+                div.left-pic {float: left; width: 60%; text-align: center; margin-top: 1%;}
+                div.right-pic-c {float: right; width: 60%; text-align: center; margin-top: 1%;}
+                div.left-pic-c {float: left; width: 40%; text-align: center; margin-top: 1%;}
+                hr.code {width: 70%;}
+                hr.big {height: 2px; background-color: #C0C0C0; width: 80%; margin-top: 15px;}
+                hr.prob {width: 25%; border-style: dashed; float: left; margin-left: 8%;}
+                hr.sol {width: 25%; border-style: dashed; float: right; margin-right: 8%;}
+                p.about {float: right; font-size: 15px; margin: 5px 10px 5px 0px;}
+                a:link, a:visited {color: #264D73;}
+                a:hover, a:active {color: #2D2D86;}
+            </style>
+        </head>
+        
+        <div class="topnav" style="float: right">
+            <button id="home" class="nav">Home</button>
+            <button id="education" class="nav">Education</button>
+            <button id="ratscrew" class="nav">Ratscrew</button>
+            <button id="lang" class="nav">Lang</button>
+            <button id="traffic" class="nav">Traffic Lights</button>
+            <button id="reddit" class="nav">Reddit</button>
+        </div>
+        
+        <body>
+            <div class="header">
+                <h1>Reddit Database</h1>
+                <h2><a href="https://github.com/gwen-sarapata/reddit" target="_blank">Reddit Git</a></h2>
+            </div>
+             <!-- About the Reddit Database Project -->
+             <div class="main">
+                 <h3>About</h3>
+                 <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Languages ~ mySQL/Python/HTML/CSS/PHP</h4>
+                 <p>The reddit database is a project that was created for my databases class partnered project. To gather the data, we created a scraper on Python to extract data. The Praw class allowed us to access real data from reddit to add to our database. This project featured a mySQL relational database. There were the following tables: SUBREDDIT, USER, MODERATOR, COMMENT, POST, COMMEN_AWARD, and POST_AWARD. The subreddit and user tables were the only entities without a foreign key, while the comment table had foreign keys to the user, post, and subreddit entites.</p>
+                 <p>We decided to give our project a website to present to the class. We used PHP to connect to the database, which allowed us to query results and update tables. The website is very limited, but can interact with our database.</p>
+             </div>
+             <hr class="big">
+             
+             <!-- Section about the reddit scraper -->
+             <div class="pic-center">
+                 <h3>The Scraper</h3>
+                 <img src="Photos/scraper.jpg"
+                     width=650px
+                     height=200px>
+                     <figcaption class="center">Subreddit Dataframe</figcaption>
+                     
+                <div class="row">
+                    <div class="col-left">
+                        <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Difficulties</h4>
+                    </div>
+                    <div class="col-right">
+                        <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Solutions</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-left">
+                        <p>An important part of this project was having a lot of real world data. We needed enough data otherwise the more advanced queries would not have very many results. We also needed to figure out how to get real data off of reddit, as it would have taken too much time to fake it. We also needed to get this data fast as our project relied on it.</p>
+                    </div>
+                    <div class="col-right">
+                        <p>We searched for a way to get data off of reddit for free and found a Python module that provides simple acces to Reddit's API, PRAW. This was the perfect solution for us because we could access any real world data that reddit had itself. We had to create a fake reddit account as the wrapper needed access to a username and password and we obviously didn&#39t want to share those. It also took hours to run the code.</p>
+                    </div>
+                </div>
+                <hr class="prob">
+                <hr class="sol">
+                <div class="row">
+                    <div class="col-left">
+                        <p>Another large portion of our project relied on creating a usable relational database. If our our schema wasn&#39t complicated enough then our project wouldn&#39t be interesting and wouldn&#39t take enough time. We also didn&#39t want to have too large of a schema otherwise we would not have been able to handle it during the semester.</p>
+                    </div>
+                    <div class="col-right">
+                        <p>When we were deciding on the tables, we knew that we needed tables for subreddits, users, posts, and comments, as these are major portions of Reddit's design. For added complexity we also decided to add a table for moderators, and post/comment awards. We decided to separate the post and comments awards because there is no primary key of awards (based off of Reddit's API) so we didn&#39t want to have two foreign keys and leave one blank. We also added extra attributes for our main entites such as an upvote ratio, comment controversiality, if a user has a verified email, the score of the post, if a comment is locked, and the creation date of comments. We did not use all of the attributes that we got data for.</p>
+                    </div>
+                </div>
+                <hr class="prob">
+                <hr class="sol">
+                <div class="row">
+                    <div class="col-left">
+                        <p>As part of our project, we were required to use involve CRUD operations (create, read, update, and delete). One of more the more common frameworks that is used with mySQL is SpringBoot, however SpringBoot is written in Java and our scraper is written in Python, which seemed not ideal. SpringBoot was the only solution that was explained to us in detail during lectures.</p>
+                    </div>
+                    <div class="col-right">
+                        <p>Instead of using SpringBoot, we decided to use PHP instead. While there were some other options for Python, such as Django, we decided to utilize PHP and also create a front end for our project, which was optional.</p>
+                    </div>
+                </div>
+                <hr class="prob">
+                <hr class="sol">
+                <div class="row">
+                    <div class="col-left">
+                        <p>We also needed to decide which queries to show off in our website. Part of the class involved making queries that weren&#39t very standard or easy. We wanted to choose queries that were interesting and different for entity, but didn&#39t want to build a complicated search engine.</p>
+                    </div>
+                    <div class="col-right">
+                        <p>When designing our website, we chose some more fun queries to showcase, such as comparing the best or worst users. We tried to have different cababilites on each page, one example was allowing a user to delete or edit controversial comments by clicking on icons instead of buttons. We wanted to make the project as fun as possible, even though neither of us had ever programmed in HTML before.</p>
+                    </div>
+                </div>
+             </div>
+             <hr class="big">
+             
+             <!-- Section for the code -->
+             <div class="main">
+                 <h3>Code and Interface Examples</h3>
+                 <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Main Page</h4>
+                 <p> The homepage has a description of our project, as well as old and new ER diagrams, and the tables that make up our database.</p>
+                 <div class="pic-center">
+                     <img src="Photos/reddit-main.jpg"
+                         width=80%
+                         margin=auto
+                         display=block>
+                         <figcaption class="center">ER Diagrams</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+                <div class="row">
+                    <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Subreddit Page</h4>
+                    <p>The subreddit section brings you to a landing page that prompts you to search for a website and shows you the top 5 subreddits by subscribers. You then enter a subreddit's name and how many results you want. You can also select advanced features like searching using subscribers, subreddit is, and public description. By entering the search, it will take you to a new page with the results.</p>
+                    <div class="left-pic">
+                        <img src="Photos/subreddit-code.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Subreddit Code</figcaption>
+                    </div>
+                    <div class="right-pic">
+                        <img src="Photos/subreddit-interface.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Subreddit Interface</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+                <div class="row">
+                    <h4 style="text-align: center; margin: 10px 0px 10px 0px;">User Page</h4>
+                    <p>The user section prompts you to create a new user or search to view the best and worst users by subreddit. Entering the search will bring youto a new page and showcases the five best and worst side by side. While the create new user pages has a form where you enter a new username, password, display name, and email.</p>
+                    <div class="left-pic">
+                        <img src="Photos/user-code.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">User Code</figcaption>
+                    </div>
+                    <div class="right-pic">
+                        <img src="Photos/user-interface.jpg"
+                            width=80%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">User Interface</figcaption>
+                    </div>
+                </div>                <hr class="code">
+                <div class="row">
+                    <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Post Page</h4>
+                    <p>The post section shows 5 hot posts from various subreddits. It shows you how many awards each post has and promts you to give one of these posts an award. You can also click on the title of the post to be escorted to the reddit page where it is located.</p>
+                    <div class="left-pic">
+                        <img src="Photos/post-code.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Post Code</figcaption>
+                    </div>
+                    <div class="right-pic">
+                        <img src="Photos/post-interface.jpg"
+                            width=70%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Post Interface</figcaption>
+                    </div>
+                </div>
+                <hr class="code">
+                <div class="row">
+                    <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Comment Page</h4>
+                    <p>The comment section brings you to the top five most controversial comments in our database. The page tells you that something needs to be done about these comments, and in the table there are options to delete or edit the comments.</p>
+                    <div class="left-pic-c">
+                        <img src="Photos/comment-code.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Comment Code</figcaption>
+                    </div>
+                    <div class="right-pic-c">
+                        <img src="Photos/comment-interface.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Comment Interface</figcaption>
+                    </div>
+                </div>
+             </div>
+             <hr class="big">
+        </body>
+        
+        <footer>
+            <p class="about"><a href="../about.html">About This Website</a></p>
+        </footer>
+    </html>
+
+<script type="text/javascript">
+    document.getElementById("home").onclick = function() {
+        location.href = "../home.html";
+    };
+    document.getElementById("education").onclick = function() {
+        location.href = "../education.html";
+    };
+    document.getElementById("ratscrew").onclick = function() {
+        location.href = "ratscrew.html";
+    };
+    document.getElementById("lang").onclick = function() {
+        location.href = "lang.html";
+    };
+    document.getElementById("traffic").onclick = function() {
+        location.href = "traffic.html";
+    };
+    document.getElementById("reddit").onclick = function() {
+        location.href = "reddit.html";
+    };
+</script>

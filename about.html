@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>about</title>
+            <style>
+                body {background-color: #F9F6EE;}
+                h1 {text-align: center; font-family: Trebuchet MS; font-size: 40px; color: #331A00;}
+                h2 {text-align: center; font-family: Palatino; font-size: 20px; color: #331A00;}
+                h3 {font-family: Trebuchet MS; font-size: 35px; margin: 20px 0px 20px 38px; color: #331A00;}
+                h4 {font-family: Trebuchet MS; font-size: 30px; margin: 10px 0px 0px 38px; color: #331A00;}
+                h5 {font-family: Palatino; font-size: 25px; margin: 10px 0px 0px 58px; color: #331A00;}
+                p {font-family: Palatino;font-size: 20px; margin: 10px 63px 0px 63px; color: #331A00;}
+                div.pic-right {padding: 10%; margin-right: 10%;}
+                div.pic-left {padding: 10%; margin-left: 10%;}
+                div.header {background-color: #E5E4E2; border-style: solid; border-width: .5px; margin: 20px 0px 10px 0px;}
+                button.b {border-right: solid; border-width: 1px; font-family: Palatino; font-size: 14px; margin: 10px 0px 0px 58px; color: #331A00;}
+                button.nav {border-right: solid; border-width: 1px; font-family: Palatino; font-size: 14px; color: #331A00;}
+                figcaption.center {text-align: center; font-family: Palatino; font-size: 14px; color: #331A00;}
+                hr.left {width: 70%; margin-top: 15px; margin-bottom: 15px; text-align: left;}
+                hr.right {width: 70%; margin-top: 15px; margin-bottom: 15px; text-align: right;}
+                hr.big {height: 2px; background-color: #C0C0C0; width: 80%;}
+                div.left-text-col {float: left; width: 70%;}
+                div.right-pic-col {float: right; width: 30%; text-align: center;}
+                div.right-text-col {float: right; width: 70%;}
+                div.left-pic-col {float: left; width: 30%; text-align: center;}
+                div.row:after {content: ""; display: table; clear: both;}
+                div.sub-sec {padding: 10px;}
+                p.about {float: right; font-size: 15px; margin: 5px 10px 5px 0px;}
+                a:link, a:visited {color: #264D73;}
+                a:hover, a:active {color: #2D2D86;}
+            </style>
+        </head>
+
+        <div class="topnav" style="float: right;">
+            <button id="home" class="nav">Home</button>
+            <button id="education" class="nav">Education</button>
+            <button id="ratscrew" class="nav">Ratscrew</button>
+            <button id="lang" class="nav">Lang</button>
+            <button id="traffic" class="nav">Traffic Lights</button>
+            <button id="reddit" class="nav">Reddit</button>
+            
+        </div>
+        
+        <body>
+            <div class="header">
+                <h1>Website</h1>
+                <h2><a href="https://github.com/gwen-sarapata/sarapata.io" target="_blank">Website Git</a></h2>
+            </div>
+            
+            <div class="main">
+                <h3>About</h3>
+                <p>This website was created as a fun project for me to learn more about front-end design. This language was coded with mostly HTML and CSS, but also used a small amount of JavaScript.</p>
+                <p>This website was created by me to showcase my education and coding projects that I made since I started coding.</p>
+                <p>This website was made entirely by me,  without the use of templetes.</p>
+            </div>
+            
+            <hr class="big" style="margin-top: 10px;">
+        </body>
+    </html>
+
+<script type="text/javascript">
+    document.getElementById("home").onclick = function() {
+        location.href = "home.html";
+    };
+    document.getElementById("education").onclick = function() {
+        location.href = "education.html";
+    };
+    document.getElementById("ratscrew").onclick = function() {
+        location.href = "Projects/ratscrew.html";
+    };
+    document.getElementById("lang").onclick = function() {
+        location.href = "Projects/lang.html";
+    };
+    document.getElementById("traffic").onclick = function() {
+        location.href = "Projects/traffic.html";
+    };
+    document.getElementById("reddit").onclick = function() {
+        location.href = "Projects/reddit.html";
+    };
+</script>
+

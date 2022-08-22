@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>lang</title>
+            <!-- Stylings using CSS -->
+            <style>
+                body {background-color: #F9F6EE;}
+                h1 {text-align: center; font-family: Trebuchet MS; font-size: 40px;  color: #331A00;}
+                h2 {text-align: center; font-family: Palatino; font-size: 20px;  color: #331A00;}
+                h3 {text-align: center; font-family: Trebuchet MS; font-size: 35px; margin: 20px 0px 20px 0px; color: #331A00;}
+                h4 {font-family: Trebuchet MS; font-size: 25px; margin: 10px 0px 0px 58px; color: #331A00;}
+                h5 {font-family: Trebuchet MS; font-size: 20px; margin: 10px 0px 0px 78px; color: #331A00;}
+                p {font-family: Palatino;font-size: 20px; margin: 10px 63px 0px 63px; color: #331A00;}
+                button.nav {border-right: solid; border-width: 1px; font-family: Palatino; font-size: 14px;} color: #331A00;
+                figcaption.center {text-align: center; font-family: Palatino; font-size: 14px; color: #331A00;}
+                div.interface-col {float: left; width: 30%; margin-left: 3.3%; margin-top: 3%; margin-bottom: 3%; margin-right: 0%;}
+                div.head-col {float: left; width: 50%;}
+                div.syn-col-left {float: left; width: 40%;}
+                div.syn-col-right {float: right; width:48%;}
+                div.row:after {content: ""; display: table; clear: both;}
+                div.content {position:relative; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); top:50%;}
+                div.header {background-color: #E5E4E2; border-style: solid; border-width: .5px; margin: 20px 0px 10px 0px;}
+                div.left-text-col {float: left; width: 60%;}
+                div.right-pic-col {float: right; width: 40%; text-align: center;}
+                div.right-text-col {float: right; width: 60%;}
+                div.left-pic-col {float: left; width: 40%; text-align: center;}
+                div.sub-col {float: left; width: 45%;}
+                div.test-text {float: left; width: 25%;}
+                div.test-tree {float: left; width: 50%;}
+                div.test-img {float: right; width: 25%;}
+                div.lang {float: left; width: 30%;}
+                div.ex {float: right; width: 50%;}
+                hr.code {width: 20%;}
+                hr.big {height: 2px; background-color: #C0C0C0; width: 80%; margin-top: 15px;}
+                hr.rulel {width: 30%; border-style: dashed; float: left; margin-left: 10%;}
+                hr.ruler {width: 30%; border-style: dashed; float: right; margin-right: 2%;}
+                hr.syn {width: 25%; border-style: dashed; float: left; margin-left: 15%;}
+                hr.ex {width: 25%; border-style: dashed; float: right; margin-right: 12%;}
+                hr.test-text {width: 15%; border-style: dashed; float: left; margin-left: 5%;}
+                hr.test-tree {width: 25%; border-style: dashed; margin-left: 45%;}
+                div.box {width: 80%; background-color: #E5E4E2; margin-left: 10%; border-style: solid; border-width: 1.5px;}
+                div.box2 {width: 100%; background-color: #CFCEC9; border-style: solid; border-width: 1.5px; border-bottom: 0px; border-right: 0pc; border-left: 0px;}
+                textarea.in {width: 99.5%; max-width: 99.5%; height: 500px; background-color: #E5E4E2; font-family: Palatino; font-size: 20px;  border-width: 0px;}
+                textarea.out {width: 99.5%; max-width: 99.5%; height: 200px; background-color: #CFCEC9; border-width: 0px; font-family: Palatino; font-size: 20px;}
+                span.place {color: #4700b3;}
+                p.about {float: right; font-size: 15px; margin: 5px 10px 5px 0px;}
+                a:link, a:visited {color: #264D73;}
+                a:hover, a:active {color: #2D2D86;}
+            </style>
+        </head>
+        
+        <!-- Navigation bar setup -->
+        <div class="topnav" style="float: right">
+            <button id="home" class="nav">Home</button>
+            <button id="education" class="nav">Education</button>
+            <button id="ratscrew" class="nav">Ratscrew</button>
+            <button id="lang" class="nav">Lang</button>
+            <button id="traffic" class="nav">Traffic Lights</button>
+            <button id="reddit" class="nav">Reddit</button>
+        </div>
+        
+        <body>
+            <!-- Header -->
+            <div class="header">
+                <h1>Lang</h1>
+                <h2><a href="https://github.com/gwen-sarapata/lang" target="_blank">Lang Git</a></h2>
+            </div>
+            
+            <!-- About Lang Section -->
+            <h3>About</h3>
+            <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Language ~ Java</h4>
+            <p>
+                Lang is a programming language that was created for a class project. Lang operates a parser and interpreter and can handle  mathematic operations, if statements, while loops, functions and classes, and variable types. Lang keeps track of parses using trees. The program has 13 classes: Parse, Parser, IntegerParse, StatementParse, VariableParse, Value, IntegerValue, ClassValue, FunctionValue, Environment, Interpreter, Location, and Main.
+            </p>
+            <hr class="big">
+            
+            <!-- Syntax Section -->
+            <h3>Syntax</h3>
+            <h3 style="font-size: 20px; color: #4700B3;">&#9001Enter Code Here&#9002</h3>
+            <div class="row">
+                <!-- Syntax without at explanation -->
+                <div class="syn-col-left">
+                    <h4>Identifiers</h4>
+                    <p>An indentifier cannot be a keyword in Lang, i.e. it cannot be any of the following: print, var, if, else, while, func, ret, class, int, bool, or string.</p>
+                    <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>Compare Operators</h4>
+                    <p>The compare operators are the following: &quot==&quot, &quot!=&quot, &quot&lt=&quot, &quot&gt=&quot, &quot&lt&quot, &quot&gt&quot.</p>
+                    <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>Comparison Expressions</h4>
+                    <p>A comparison expression are the following: &quot&&&quot, &quot||&quot, and &#39!&#39.</p>
+                    <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>Members</h4>
+                    <p>A member consists of &#39.&#39 then an optional space then an identifier.</p>
+                    <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>Comments</h4>
+                    <p># <span class="place">&#9001Comments can only last one line&#9002</span></p>
+                    <h4>Print Statements</h4>
+                    <p>print <span class="place">&#9001expression&#9002</span>&#59</p>
+                    <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>Assignment Statement</h4>
+                    <p> var <span class="place">&#9001name&#9002</span> = <span class="place">&#9001value&#9002</span>&#59</p>
+                </div>
+                <div class="ver-line">
+                    <hr width=".5" size="500" style="float: left; margin-left: 8%;
+                    margin-top: 5%;">
+                </div>
+                
+                <!-- Syntax with an explanation -->
+                <div class="syn-col-right">
+                    <h4>If Statements</h4>
+                    <p> if (<span class="place">&#9001comparison expressions&#9002</span>) &#123 <br>
+                        &emsp;<span class="place">&#9001expressions&#9002</span> <br>
+                        &#125</p>
+                        <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>While Statements</h4>
+                    <p>while &#40<span class="place">&#9001comparison expressions&#9002</span>&#41 &#123 <br>
+                        &emsp;<span class="place">&#9001expressions&#9002</span><br>
+                        &#125</p>
+                    <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>Functions</h4>
+                    <div class="row">
+                        <div class="lang">
+                            <p>func&#40<span class="place">&#9001parameters&#9002</span>&#41 &#123 <br>
+                                &emsp;<span class="place">&#9001expressions&#9002</span> <br>
+                                &#125&#59 &#40<span class="place">&#9001arguments&#9002</span>&#41&#59</p>
+                        </div>
+                        <div class="ex">
+                            <p>var <span class="place">&#9001name&#9002</span> = func&#40<span class="place">&#9001parameters&#9002</span>&#41 &#123 <br>
+                                &emsp;<span class="place">&#9001expressions&#9002</span> <br>
+                                &emsp;ret <span class="place">&#9001statement&#9002</span>&#59 <br>
+                                &#125&#59 <br>
+                                <span class="place">&#9001name&#9002</span>&#40<span class="place">&#9001arguments&#9002</span>&#41&$59</p>
+                        </div>
+                    </div>
+                    <hr class="syn">
+                    <br style="width: .1px;">
+                    <h4>Classes</h4>
+                    <p>var <span class="place">&#9001class_name&#9002</span> = class &#123 <br>
+                        &emsp;var <span class="place">&#9001func_name&#9002</span> = func&#40<span class="place">&#9001parameters&#9002</span>&#41 &#123 <br>
+                        &emsp;&emsp;ret <span class="place">&#9001statement&#9002</span>&#59 <br>
+                        &emsp;&#125*&#59 <br>
+                        &#125&#59 <br>
+                        <span class="place">&#9001class_name&#9002</span>&#40&#41.<span class="place">&#9001func_name&#9002</span>&#40<span class="place">&#9001parameters&#9002</span>&#41&#59</p>
+                </div>
+            </div>
+            <hr class="big">
+            
+            <!-- Error Messages section -->
+            <div class="main">
+                <h3>Runtime Error Messages</h3>
+                <div class="row">
+                    <!-- Actual error message -->
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Divide by zero</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to divide by zero</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Variable already defined</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to declare a variable that has already been declared</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Undefined Variable</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to use an undefined variable</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Math operations on functions</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to use a math operation on a function</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Returning outside function</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to use a return statement outside of a function</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Calling a non-function</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to call something that is not a function</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Argument mismatch</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>Your arguments weren&#39t of the correct type</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Member of non-object</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to call a method on a variable that does not represent an object</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Undefined member</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>You tried to use a member that was not defined</p>
+                        </div>
+                    </div>
+                    <hr class="rulel">
+                    <hr class="ruler">
+                    <br style="width: 0.5">
+                    <div class="row">
+                        <div class="sub-col" style="margin-left: 3.5%;">
+                            <p>Type mismatch</p>
+                        </div>
+                        <div class="sub-col" style="text-align: right;">
+                            <p>Your variables weren&#39t of the correct  type</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br style="width: 0.5px";>
+            <hr class="big">
+            
+            <!-- Code review section -->
+            <h3>Code</h3>
+            
+            <!-- Parser related Methods -->
+            <div class="row">
+                <div class="left-text-col">
+                    <h4 style="margin-top: 5%;">Parse Class</h4>
+                    <p>
+                        The Parse class has three protected variables, the name of the parse node, the index of the last character we parsed through, and a LinkedList of the children. It only has one constructor which initalizes name and index. There is a method to see if two parses are equal as well as normal sets and gets.
+                    </p>
+                </div>
+                <div class="right-pic-col">
+                    <img src="Photos/parse.jpg"
+                        width=90%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">Parse Equals Method</figcaption>
+                </div>
+            </div>
+            <hr class="code">
+            <div class="row">
+                <div class="right-text-col">
+                    <h4 style="margin-top: 5%;">Parse Subclasses</h4>
+                    <p>
+                        The StatementParse and IntegerParse classes have a boolean variable to keep track if the variable is typed, as this is optional. The StatementParse class has a protected variable of a LinkedList for children. While the VariableParse class has a VariableParse variable. Both classes have the similare constructors and methods as Parse, but they also hav a toString which is used for keeping track of the tree.
+                    </p>
+                </div>
+                <div class="left-pic-col">
+                    <img src="Photos/sub-parse.jpg"
+                        width=90%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">StatementParse toString</figcaption>
+                </div>
+            </div>
+            <hr class="code">
+            <div class="row">
+                <div class="left-text-col">
+                    <h4 style="margin-top: 10%">Parser Class</h4>
+                    <p>
+                        The Parser parses through the statements and makes sure that the correct syntax is followed. Since there is a lot of logic in this class, it is quite large. However, this class was the most straightforward to code because it was all enforcing syntax.
+                    </p>
+                </div>
+                <div class="right-pic-col">
+                    <img src="Photos/parser.jpg"
+                        width=80%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">Parser</figcaption>
+                </div>
+            </div>
+            <hr class="code">
+            
+            <!-- Value related methods -->
+            <div class="row">
+                <div class="right-text-col">
+                    <h4 style="margin-top: 5%;">Value Class</h4>
+                    <p>
+                        The Value class has one protected variable to keep track of its name. Its only constructor initalizes name. The class can return the name or get the integer value. Value can also get the environment, indetifier, object, parameters, types, or return type. It can also add, subtract, multiply, or divide the value. Value also has an equal method using both a Value and an int as well as not equals, less than or equal to, greater than or equal to, less than, and greater than for both parameter types.
+                    </p>
+                </div>
+                <div class="left-pic-col">
+                    <img src="Photos/value.jpg"
+                        width=80%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">Value</figcaption>
+                </div>
+            </div>
+            <hr class="code">
+            <div class="row">
+                <div class="left-text-col">
+                    <h4 style="margin-top: 13%;">Value Subclasses</h4>
+                    <p>
+                        These classes are all subclasses of Value. IntegerValue has an int to keep track of the value and also has a constuctor to initalize value, get the value, and return a toString. FunctionValue also has a variable to keep track of the intermediate representation of the function, the environment, the parameters, the types, the return types, and a boolean if it has a signature. It only has a constructor and a toString. ClassValue has an itermediate representation as well as the environment and has similar methods to FunctionValue. The Location class has the variables for where the value is store and its indetifier. It only has a constructor.
+                    </p>
+                </div>
+                <div class="right-pic-col">
+                    <img src="Photos/sub-value.jpg"
+                        width=70%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">IntegerValue</figcaption>
+                </div>
+            </div>
+            <hr class="code">
+            
+            <!-- Miscellaneous methods section -->
+            <div class="row">
+                <div class="right-text-col">
+                    <h4 style="margin-top: 10%;">Environment Class</h4>
+                    <p>
+                        The Environment class keeps track of the environment at any given moment. This class is important for function and class calls.
+                    </p>
+                </div>
+                <div class="left-pic-col">
+                    <img src="Photos/environment.jpg"
+                        width=70%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">Enviroment</figcaption>
+                </div>
+            </div>
+            <hr class="code">
+            <div class="row">
+                <div class="left-text-col">
+                    <h4 style="margin-top: 10%;">Interpreter Class</h4>
+                    <p>
+                        The Interpreter class is where lang actually interprets the program. It is the class that actually evaluates the mathematical properties ad well as the statements lang can handle, classes and functions. Interpreter has a method to evaluate any statement that lang can parse.
+                    </p>
+                </div>
+                <div class="right-pic-col">
+                    <img src="Photos/interpreter.jpg"
+                        width=80%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">Interpreter</figcaption>
+                </div>
+            </div>
+            <hr class="code">
+            <div class="row">
+                <div class="right-text-col">
+                    <h4 style="margin-top: 2%;">Main Class</h4>
+                    <p>
+                        The Main class runs lang against set test cases to insure that the language is running correctly. It can test using files and directories as well as giving an error message.
+                    </p>
+                </div>
+                <div class="left-pic-col">
+                    <img src="Photos/main-lang.jpg"
+                        width=80%
+                        margin=auto
+                        display=block>
+                    <figcaption class="center">Main</figcaption>
+                </div>
+            </div>
+            <hr class="big">
+            
+            <!-- Sample test cases -->
+            <div class="main">
+                <h3>Sample Test Cases</h3>
+                <div class="row">
+                    <div class="test-text">
+                        <h3 style="font-size: 30px;">Code</h3>
+                    </div>
+                    <div class="test-tree">
+                        <h3 style="font-size: 30px;">Tree Structure</h3>
+                    </div>
+                    <div class="test-img">
+                        <h3 style="font-size: 30px;">Output</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>Divid by Zero</h4>
+                    <div class="test-text">
+                        <p>#division by zero <br>
+                        print 200/0&#59</p>
+                    </div>
+                    <div class="test-tree">
+                        <p>N.A.</p>
+                    </div>
+                    <div class="test-img" style="text-align: center;">
+                        <img src="Photos/zero.jpg"
+                            width=60%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Runtime Error</figcaption>
+                    </div>
+                </div>
+                <hr class="test-text">
+                <hr class="test-tree">
+                <div class="row">
+                    <h4>Order of Operations</h4>
+                    <div class="test-text">
+                        <p># This is testing order of operationns and making sure that the division is done before subtraction <br>
+                        print 2 + 16 - 8 / 2;</p>
+                    </div>
+                    <div class="test-tree">
+                        <p>N.A.</p>
+                    </div>
+                    <div class="test-img" style="text-align: center;">
+                        <img src="Photos/op.jpg"
+                            width=85%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Correct Output: 14</figcaption>
+                    </div>
+                </div>
+                <hr class="test-text">
+                <hr class="test-tree">
+                <div class="row">
+                    <h4>Unique Variable Declaration</h4>
+                    <div class="test-text">
+                        <p># tests to make sure you cannot declare the same variable twice <br>
+                        var test = 2+3&#59 var test = 1&#59</p>
+                    </div>
+                    <div class="test-tree">
+                        <p>&#40 sequence &#40 declare test &#40 + 2 3 &#41 &#41 &#40 declare test 1 &#41 &#41</p>
+                    </div>
+                    <div class="test-img" style="text-align: center;">
+                        <img src="Photos/var.jpg"
+                            width=95%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Runtime Error</figcaption>
+                    </div>
+                </div>
+                <hr class="test-text">
+                <hr class="test-tree">
+                <div class="row">
+                    <h4>While Loops</h4>
+                    <div class="test-text">
+                        <p># finds the first positive integer with a 1 in the ones place that isn&#39t divisible by 7 <br>
+                        var a = 1&#59 <br>
+                        var done = 0&#59
+                        while &#40! done&#41&#123 <br>
+                        &emsp;if&#40&#40a/7&#41 * 7 == a&#41&#123 <br>
+                        &emsp;&emsp;print a&#59 <br>
+                        &emsp;&emsp;done = 1&#59 <br>
+                        &emsp;&#125 <br>
+                        &emsp;a = a + 10&#59 <br>
+                        &#125</p>
+                    </div>
+                    <div class="test-tree">
+                        <p>&#40 sequence &#40 declare a 1 &#41 &#40 declare done 0 &#41 &#40 while &#40 ! &#40 lookup done &#41 &#41 <br>
+                        &emsp;&#40 sequence &#40 if &#40 == &#40 * &#40 / &#40 lookup a &#41 7 &#41 7 &#41 &#40 lookup a &#41 *#41 <br>
+                        &emsp;&emsp;&#40 sequence &#40 print &#40 lookup a &#41 &#41 &#40 assign &#40 varloc done &#41 1 &#41 &#41 &#41 <br>
+                        &emsp;&emsp;&emsp;&#40 assign &#40 varloc a &#41 &#40 + &#40 lookup a &#41 10 &#41</p>
+                    </div>
+                    <div class="test-img" style="text-align: center;">
+                        <img src="Photos/while.jpg"
+                            width=100%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Correct Output: 21</figcaption>
+                    </div>
+                </div>
+                <hr class="test-text">
+                <hr class="test-tree">
+                <div class="row">
+                    <div class="test-text">
+                        <h4>Break on Return</h4>
+                        <p>#test to make sure while loops also break with returns <br>
+                        func&#40a&#41&#123 <br>
+                        while&#40a&#41&#123 <br>
+                        &emsp;ret a&#59 <br>
+                        &emsp;print a&#59 <br>
+                        &#125
+                        print 13&#59
+                        &#125&#40;1&#41&#59</p>
+                    </div>
+                    <div class="test-tree">
+                        <p>&#40 sequence &#40 call &#40 function &#40 parameters a &#41 <br>
+                        &emsp;&#40 sequence &#40 while &#40 lookup a &#41 &#41 &#40 sequence &#40 return &#40 lookup a &#41 &#41 &#40 print &#40 lookup a &#41 &#41 &#41 &#41 <br>
+                        &emsp;&emsp;&#40 print 13 &#41 &#41 &#41 &#40 arguments 1 &#41 &#41 &#41</p>
+                    </div>
+                    <div class="test-img" style="text-align: center;">
+                        <img src="Photos/break.jpg"
+                            width=80%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">No Output</figcaption>
+                    </div>
+                </div>
+                <hr class="test-text">
+                <hr class="test-tree">
+                <div class="row">
+                    <div class="test-text">
+                        <h4>Functions</h4>
+                        <p># Testing variable assignment <br>
+                        <br>
+                        var ThreeFunctions = class&#123 <br>
+                        &emsp;var num = 1&#59 <br>
+                        &emsp;var fakechange = func&#40this, n&#41&#123 <br>
+                        &emsp;&emsp;var num = n&#59 <br>
+                        &emsp;&#125&#59 <br>
+                        &emsp;var realchange = func&#40this, n&#41&#123 <br>
+                        &emsp;&emsp;num = 2&#59 <br>
+                        &emsp;&#125&#59 <br>
+                        &emsp;var realchange2 = func&#40this, n&#41&#123 <br>
+                        &emsp;&emsp;this.num = n&#59 <br>
+                        &emsp;&#125&#59 <br>
+                        &#125&#59 <br>
+                        <br>
+                        var x = ThreeFunctions&#40&#41&#59 <br>
+                        x.fakechange&#40;2&#41&#59 <br>
+                        print x.num&#59 <br>
+                        x.realchange&#40;3&#41&#59 <br>
+                        print x.num&#59 <br>
+                        x.realchange2&#40;4&#41&#59 <br>
+                        print x.num&#59 <br>
+                        x.num = 5&#59 <br>
+                        print x.num&#59</p>
+                    </div>
+                    <div class="test-tree">
+                        <p>&#40 sequence &#40 declare ThreeFunctions &#40 class &#40 declare num 1 &#41 &#40 declare fakechange &#40 function &#40 parameters this n &#41 <br>
+                        &ensp;&#40 sequence &#40 declare num &#40 lookup n &#41 &#41 &#41 &#41 &#41 &#40 declare realchange &#40 function <br>
+                        &ensp;&ensp;&#40 parameters this n &#41 &#40 sequence &#40 assign &#40 varloc num &#41 &#40 lookup n &#41 &#41 &#41 &#41 &#41 <br>
+                        &ensp;&ensp;&ensp;&#40 declare realchange2 &#40 function &#40 parameters this n &#41 &#40 sequence &#40 assign &#40 memloc <br>
+                        &ensp;&ensp;&ensp;&ensp;&#40 varloc this &#41 num &#41 &#40 lookup n &#41 &#41 &#41 &#41 &#41 &#41 &#41 &#40 declare x &#40 call &#40 lookup ThreeFunctions &#41 <br>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&#40 arguments &#41 &#41 &#41 &#40 call &#40 member &#40 lookup x &#41 fakechange &#41 &#40 arguments 2 &#41 &#41 <br>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&#40 print &#40 member &#40 lookup x &#41 num &#41 &#41 &#40 call &#40 member &#40 lookup x &#41 realchange &#41 <br>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&#40 arguments 3 &#41 &#41 &#40 print &#40 member &#40 lookup x &#41 num &#41 &#41 &#40 call &#40 member <br>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&#40 lookup x &#41 realchange2 &#41 &#40 arguments 4 &#41 &#41 &#40 print &#40 member &#40 lookup x &#41 num &#41 &#41 <br>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&#40 assign &#40 memloc &#40 varloc x &#41 num &#41 5 &#41 &#40 print &#40 member &#40 lookup x &#41 num &#41 &#41 &#41</p>
+                    </div>
+                    <div class="test-img" style="text-align: center;">
+                        <img src="Photos/func.jpg"
+                            width=80%
+                            margin=auto
+                            display=block>
+                            <figcaption class="center">Correct Output: 1 \n 2 \n 4 \n 5 \n</figcaption>
+                    </div>
+                </div>
+            </div>
+            <hr class="big">
+            <!-- Work in progress
+            <h3>Mini IDE</h3>
+            <div class="box">
+                <textarea class="in" type="text" name="in-lang" placeholder="Enter Lang Code"></textarea>
+                <button id="save" class="nav" style="float: right">Compile</button>
+                <div class="box2">
+                    <textarea class="out" type="text" id="out-lang" name="out-lang" placeholder="Output"></textarea>
+                </div>
+            </div>
+            -->
+        </body>
+        
+        <footer>
+            <p class="about"><a href="../about.html">About This Website</a></p>
+        </footer>
+    </html>
+
+<script type="text/javascript">
+    document.getElementById("home").onclick = function() {
+        location.href = "../home.html";
+    };
+    document.getElementById("education").onclick = function() {
+        location.href = "../education.html";
+    };
+    document.getElementById("ratscrew").onclick = function() {
+        location.href = "ratscrew.html";
+    };
+    document.getElementById("lang").onclick = function() {
+        location.href = "lang.html";
+    };
+    document.getElementById("traffic").onclick = function() {
+        location.href = "traffic.html";
+    };
+    document.getElementById("reddit").onclick = function() {
+        location.href = "reddit.html";
+    };
+    /* Work in Progress */
+    /*
+    function saveTextAsFile() {
+      var textToWrite = document.getElementById('textArea').innerHTML;
+      var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
+      var fileNameToSaveAs = "input.lang"; //filename.extension
+
+      var downloadLink = document.createElement("a");
+      downloadLink.download = fileNameToSaveAs;
+      downloadLink.innerHTML = "Download File";
+      if (window.webkitURL != null) {
+        // Chrome allows the link to be clicked without actually adding it to the DOM.
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+      } else {
+        // Firefox requires the link to be added to the DOM before it can be clicked.
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+      }
+
+      downloadLink.click();
+    }
+
+    var button = document.getElementById('save');
+    button.addEventListener('click', saveTextAsFile);
+
+    function destroyClickedElement(event) {
+      // remove the link from the DOM
+      document.body.removeChild(event.target);
+    }
+    
+    function loadFile() {
+        var xmlhttp = new XMLHttpRequest();
+        var url = "output.txt";
+
+        xmlhttp.onreadystatechange = function() {
+
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var myArr = JSON.parse(xmlhttp.responseText);
+                myFunction(myArr);
+
+                console.log("xmlhttp Request Asepted");
+            }
+
+
+        }
+
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+
+            function myFunction(arr) {
+                var out = "";
+                var i;
+                var row = 0;
+
+            for(i = 0; i < arr.length; i++) {
+               // console.log( arr[1].data); change data to what every you have in  your file
+               // out +=  arr[i].data + '<br>' + arr[i].data2 ;
+                document.getElementById("out-lang").innerHTML = out;
+
+            }
+
+        }
+        
+    }
+    
+    function httpGet(theUrl)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+     */
+</script>
+

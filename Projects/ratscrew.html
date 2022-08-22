@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ratscrew</title>
+            <style>
+                body {background-color: #F9F6EE;}
+                h1 {text-align: center; font-family: Trebuchet MS; font-size: 40px; color: #331A00;}
+                h2 {text-align: center; font-family: Palatino; font-size: 20px; color: #331A00;}
+                h3 {text-align: center; font-family: Trebuchet MS; font-size: 35px; margin: 20px 0px 20px 0px; color: #331A00;}
+                h4 {font-family: Trebuchet MS; font-size: 25px; margin: 10px 0px 0px 58px; color: #331A00;}
+                h5 {font-family: Trebuchet MS; font-size: 20px; margin: 10px 0px 0px 78px; color: #331A00;}
+                p {font-family: Palatino;font-size: 20px; margin: 10px 63px 0px 63px; color: #331A00;}
+                button.nav {border-right: solid; border-width: 1px; font-family: Palatino; font-size: 14px; color: #331A00;}
+                figcaption.center {text-align: center; font-family: Palatino; font-size: 14px; color: #331A00;}
+                div.interface-col {float: left; width: 30%; margin-left: 3.3%; margin-top: 3%; margin-bottom: 3%; margin-right: 0%;}
+                div.head-col-left {float: left; width: 33%;}
+                div.head-col-right {float: right; width: 60%;}
+                div.row:after {content: ""; display: table; clear: both;}
+                div.content {position:relative; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); top:50%;}
+                div.header {background-color: #E5E4E2; border-style: solid; border-width: .5px; margin: 20px 0px 10px 0px;}
+                div.left-text-col {float: left; width: 60%;}
+                div.right-pic-col {float: right; width: 40%; text-align: center;}
+                div.right-text-col {float: right; width: 60%;}
+                div.left-pic-col {float: left; width: 40%; text-align: center;}
+                hr.code {width: 20%; margin-top: 10px; margin-bottom: 10px;}
+                hr.big {height: 2px; background-color: #C0C0C0; width: 80%;}
+                p.about {float: right; font-size: 15px; margin: 5px 10px 5px 0px;}
+                a:link, a:visited {color: #264D73;}
+                a:hover, a:active {color: #2D2D86;}
+            </style>
+        </head>
+        
+        <div class="topnav" style="float: right">
+            <button id="home" class="nav">Home</button>
+            <button id="education" class="nav">Education</button>
+            <button id="ratscrew" class="nav">Ratscrew</button>
+            <button id="lang" class="nav">Lang</button>
+            <button id="traffic" class="nav">Traffic Lights</button>
+            <button id="reddit" class="nav">Reddit</button>
+        </div>
+        
+        <body>
+            <div class="header">
+                <h1>Ratscrew</h1>
+                <h2><a href="https://github.com/gwen-sarapata/ratscrew" target="_blank">Ratscrew Git</a></h2>
+            </div>
+            
+            <div class="row">
+                <div class="head-col-left">
+                    <h3>About</h3>
+                    <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Language ~ Java</h4>
+                    <p>
+                        This coding project was the first large coding project I ever worked on. This was coded in early 2019 and has barely been changed since then, except for re-working the code to work on a new computer.
+                    </p>
+                    
+                    <p>
+                        This code is definitely still has some bugs and the interface looks something out of the mid 2000&#39s, but I wanted to showcase real early work projects. This project was the first time I had ever worked with a project that does not only print output to the screen.
+                    </p>
+                    
+                    <p>
+                        The program took many hours of meticulous work, not only to create a layout for the first time, but also implement rules to a real world game. The output is something I&#39m proud of for a first real programming attempt.
+                    </p>
+                </div>
+                
+                <div class="ver-line">
+                    <hr width=".5" size="450%" style="float: left; margin-left: 4%;
+                    margin-top: 5%;">
+                </div>
+                
+                <div class="head-col-right">
+                    <div class="main">
+                        <h3>Rules</h3>
+                        <h4>Dealing</h4>
+                        <p>
+                            Deal cards one at a time to each player until all cards have been dealt, ensuring to keep the cards face down.
+                        </p>
+                        
+                        <h4>Playing</h4>
+                        <p>
+                            The player to the left of the dealer begins. To play, pull the top card off of your un-visible hand and place it face up in a pile on the middle of the table. This continues until someone puts down a face card. If the next player does not put down another face card within their alloted chande, the person who placed the last face card gets the pile. The only thing that overrides the face card rule is a slap.
+                        </p>
+                        
+                        <h4>The Slap</h4>
+                        <p>
+                            <b>Double ~ </b> When two cards of equivelent value are placed consecutively.
+                        </p>
+                        <p>
+                            <b>Sandwich ~ </b> When two cards of equivelent value are placed consecuitvely with only one card in between them.
+                        </p>
+                        <p>
+                            If there was an invalid slap, you must add a card to the bottom of the pile.
+                        </p>
+                        
+                        <h4>Winning</h4>
+                        <p>
+                            To win, one player must pick up all the cards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="head-col-left">
+                <hr width = 60%>
+            </div>
+            <div class="head-col-right">
+                <hr width = 60%>
+            </div>
+            
+            <div class="main">
+                <h3>Interface</h3>
+                <h4>Computer/Player: </h4>
+                <p>
+                    The computer or player components each have a layered pane and a label. The layed pane holds the images of their cards, has an outline, and is titled according to which hand it is.
+                </p>
+                
+                <h4>Pile: </h4>
+                <p>
+                    The pile is very similar to the computer or player layout, except it also has a label for important events such as: who picked up the pile, if someone slapped, etc.
+                </p>
+                
+                <h4>Buttons: </h4>
+                <p>
+                    The buttons are placed in their own panel. There are buttons to slap, place a player card, place a computer card, or start a new game. A button can only be pressed to play a card if it is that players turn.
+                </p>
+            </div>
+            
+            <hr class="big" style="margin-top: 10px;">
+            
+            <div class="row">
+                <div class="interface-col">
+                    <img src="Photos/game-start.jpg"
+                        width=80%
+                        margin=auto
+                        display=block;>
+                        <figcaption class="center">The Start of a Game</figcaption>
+                </div>
+                
+                <div class="interface-col">
+                    <img src="Photos/game-double.jpg"
+                        width=80%
+                        margin=auto
+                        display=block;>
+                        <figcaption class="center">Double Slap Rule</figcaption>
+                </div>
+                
+                <div class="interface-col">
+                    <img src="Photos/game-sandwich.jpg"
+                        width=80%
+                        margin=auto
+                        display=block;>
+                        <figcaption class="center">Sandwich Slap Rule</figcaption>
+                </div>
+            </div>
+            
+            <hr width=60%>
+            
+            <div class="row">
+                <div class="interface-col">
+                    <img src="Photos/game-player-slap.jpg"
+                        width=80%
+                        margin=auto
+                        display=block;>
+                        <figcaption class="center">After a Player Slap</figcaption>
+                </div>
+                
+                <div class="interface-col">
+                    <img src="Photos/game-computer-slap.jpg"
+                        width=80%
+                        margin=auto
+                        display=block;>
+                        <figcaption class="center">After a Computer Slap</figcaption>
+                </div>
+                
+                <div class="interface-col">
+                    <img src="Photos/game-win.jpg"
+                        width=80%
+                        margin=auto
+                        display=block;>
+                        <figcaption class="center">Computer Wins the Game</figcaption>
+                </div>
+            </div>
+            
+            <hr class="big">
+            
+            <div class="main">
+                <h3>Code</h3>
+                <div class="row">
+                    <div class="left-text-col">
+                        <h4>Code Class</h4>
+                        <p>
+                            The Card class is only intended to keep track of one singular card. It has four private variables: rank, suit, value, and image. There are two constuctions. One which creates an empty card and a second which fills in all the variables. There are also get functions for each of the variables and a toString method to return a string value of "rank of the suit".
+                        </p>
+                    </div>
+                    
+                    <div class="right-pic-col">
+                        <img src="Photos/card.jpg"
+                            width=90%
+                            margin=auto
+                            display=block
+                            style="margin-right: 1%;">
+                            <figcaption class="center">Card Constructor</figcaption>
+                    </div>
+                </div>
+                
+                <hr class="code">
+                
+                <div class="row">
+                    <div class="right-text-col" style="margin-top: 1%;">
+                        <h4>Hand Class</h4>
+                        <p>
+                            The Hand class is intended to keep track of only one players hand (computer, player, or pile). It has two private variables, one for the number of cards and one ArrayList of cards. Hand has two constructors. One of which to create an empty hand, and the other to create a hand of a list of cards. This class has the methods sets and gets for both variables, adding one card, adding a card to a certain position, removing one card based off of position, getting the card at a certain position, clearing the array, and adding or remove one value from the size.
+                        </p>
+                    </div>
+                    
+                    <div class="left-pic-col">
+                        <img src="Photos/hand.jpg"
+                            width=90%
+                            margin=auto
+                            display=block
+                            style="margin-left: 1%;">
+                            <figcaption class="center">Hand Method Examples</figcaption>
+                    </div>
+                </div>
+                
+                <hr class="code">
+                
+                <div class="row">
+                    <div class="left-text-col">
+                        <h4 style="margin-top: 10%;">Deck Class</h4>
+                        <p>
+                            The Deck class keeps track of the deck. It has three private variables: an array of the deck, the index of the next card to be dealt, a final variable for number of cards, and a String array of the files for the card images. Deck only has one constructor, which creates a Card for the amount of cards to be dealt. Deck also has the methods to: shuffle, and a card.
+                        </p>
+                    </div>
+                    
+                    <div class="right-pic-col">
+                        <img src="Photos/deck.jpg"
+                            width=70%
+                            margin=auto
+                            display=block
+                            style="margin-right: 1%;">
+                            <figcaption class="center">Shuffle Method</figcaption>
+                    </div>
+                </div>
+                
+                <hr class="code">
+                
+                <div class="row">
+                    <div class="right-text-col">
+                        <h4>RatscrewGUI Class</h4>
+                        <p>
+                            The RatscrewGUI class is where the interface is created and the rules of the game are inforced. The class has various private variables which are for the panels, labels, layered panes, buttons, deck, cards, hands, slaps, and recent cards we need. It only has one constructor which builds the panel.
+                        </p>
+                        <h5>Methods</h5>
+                        <p style="margin-left: 85px;">
+                            The build panel method initializes all of the private variables. <br>
+                            The deal hand method deals cards to the hand passed to it. <br>
+                            The reprint hand method will recreate the images of the back of the cards that are pictured in the computer or player hands. <br>
+                            The start game method resets all positions, deals cards to each player, and forces the computer to place a card. <br>
+                            The put card method allows either hand to place a card on top of the pile. pickPile allows either hand to pick up the enitre pile. <br>
+                            placeCards determines of either player needs to pick up the pile. <br>
+                            GameOver determines if the game is over. <br>
+                            Slap determines if a slap is valid. <br>
+                            ComputerSlap will randomly decide to slap based off of a random number generator. <br>
+                        </p>
+                        <p>
+                            The final portion of the code handles the button's actions.
+                        </p>
+                    </div>
+                    
+                    <div class="left-pic-col">
+                        <img src="Photos/gui.jpg"
+                            width=90%
+                            margin=auto
+                            display=block
+                            style="margin-left: 1%; margin-top: 10%;">
+                            <figcaption class="center">GameOver Method</figcaption>
+                    </div>
+                </div>
+                
+                <hr class="code">
+                
+                <div class="row">
+                    <div class="left-text-col">
+                        <h4 style="margin-top: 10%;">CardApp Class</h4>
+                        <p>
+                            The only purpose of the CardApp class is to create the frame, set the size, make the frame visible, and close the frame at the end.
+                        </p>
+                    </div>
+                    
+                    <div class="right-pic-col">
+                        <img src="Photos/card-app.jpg"
+                            width=70%
+                            margin=auto
+                            display=block
+                            style="margin-right: 1%; margin-top: 5%;">
+                            <figcaption class="center">Full CardApp Class</figcaption>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="big" style="margin-top: 15px;">
+            
+            <div class="main">
+                <h3>Problems</h3>
+                <h4>Back of Card Animation</h4>
+                <p>
+                    Sometimes when a card gets added to a pile, it shows the front of the card but not the back of the card. It does not do this all the time.
+                </p>
+                
+                <hr width=30% style="float: left; margin-left: 5%;"> <br>
+                
+                <h4>GameOver</h4>
+                <p>
+                    The game ends when a player runs out of cards, but theoretically a player could slap back in after running out of cards.
+                </p>
+                
+                <hr width=30% style="float: left; margin-left: 5%;"> <br>
+                
+                <h4>Pile Amount Updating</h4>
+                <p>
+                    Sometimes the pile hand won&#39t update after a player picks up the pile.
+                </p>
+            </div>
+            <hr class="big" style="margin-top: 15px;">
+        </body>
+        
+        <footer>
+            <p class="about"><a href="../about.html">About This Website</a></p>
+        </footer>
+    </html>
+
+<script type="text/javascript">
+    document.getElementById("home").onclick = function() {
+        location.href = "../home.html";
+    };
+    document.getElementById("education").onclick = function() {
+        location.href = "../education.html";
+    };
+    document.getElementById("ratscrew").onclick = function() {
+        location.href = "ratscrew.html";
+    };
+    document.getElementById("lang").onclick = function() {
+        location.href = "lang.html";
+    };
+    document.getElementById("traffic").onclick = function() {
+        location.href = "traffic.html";
+    };
+    document.getElementById("reddit").onclick = function() {
+        location.href = "reddit.html";
+    };
+</script>
+
