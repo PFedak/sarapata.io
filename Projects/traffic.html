@@ -76,7 +76,7 @@
                         <p>While researching for this project, it became very apparent that finding a large enough dataset was critcal. Although I had never worked with any for of artifical intelligence, I learned that building a neural network required as many images as possible for a more accurate network. Luckily i found a <a href="https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset">dash cam data set</a> that featured over 43,000 images and over 118,000 annotated traffic lights.</p>
                     </div>
                     <div class="right-pic-col" style="margin-top: 2%;">
-                        <img src="Photos/dashcam.jpg"
+                        <img src="../Photos/dashcam.jpg"
                             width=80%
                             margin=auto
                             display=block>
@@ -106,7 +106,7 @@
                         <p>The image pre-processing step only applied to the training images because the validation images should be unedited in order to determine if the neural network truely recognizes traffic lights.</p>
                     </div>
                     <div class="right-pic-col">
-                        <img src="Photos/dashcam-processed.jpg"
+                        <img src="../Photos/dashcam-processed.jpg"
                             width=75%
                             margin=auto
                             display=block>
@@ -123,7 +123,7 @@
                         <p>The main setback that happened during this process was reading the csv file. Pandas has a method to read a csv file, but they usually separate the sections using commas, while this dataset was seperated by semi-colon. I made the mistake of not reading the documentation before realizing that i could set the seperation charater to a semi-colon, which made this method fairly straight-forward.</p>
                     </div>
                     <div class="left-pic-col">
-                        <img src="Photos/labels.jpg"
+                        <img src="../Photos/labels.jpg"
                             width=95%
                             margin=auto
                             display=block>
@@ -139,7 +139,7 @@
                         <p>The final step before I could start building the model involved loading the images so that they could be used by the neural network. The way I decided to dothis was by using an ImageDataGenerator. This is a useful augmentation method because it allows us to include options that combat overfitting. This includes shifting the images slightly left/right or up/down and changing the brightness of the images. An ImageDataGenerator also allows us to split the data into training and validation sets and use our image pre-processing function.</p>
                     </div>
                     <div class="right-pic-col" style="margin-top: 1%">
-                        <img src="Photos/data-gen.jpg"
+                        <img src="../Photos/data-gen.jpg"
                             width=97%
                             margin=auto
                             display=block>
@@ -155,7 +155,7 @@
                         <p>In order to use the images, I then used the method flow_from_dataframe. I used this method to get the images from the previous created to be used by TensorFlow. This is the step where I set up the images with the annotations. I gave the method the 6 possible annotations which are: go, stop, warning, goLeft, stopLeft, and warningLeft. This is also the step where I seperated the training generator from the validation generator.</p>
                     </div>
                     <div class="left-pic-col">
-                        <img src="Photos/training-gen.jpg"
+                        <img src="../Photos/training-gen.jpg"
                             width=95%
                             margin=auto
                             display=block>
@@ -172,7 +172,7 @@
                         <p>The activation function is a very important piece of this method. I am using the sigmoid activation, which gives a probability for each output, and is good to use with multible labels.</p>
                     </div>
                     <div class="right-pic-col">
-                        <img src="Photos/model.jpg"
+                        <img src="../Photos/model.jpg"
                             width=97%
                             margin=auto
                             display=block>
@@ -188,7 +188,7 @@
                         <p>When you compile the model, you define the loss function, the optimizer, and the metrics. The optimizer that I used is Adam. The Adam optimizer combines two gradient descent methodologies. This is a newer optimizer, but had become popular recently. I chose binary crossentropy as the loss function because it compares each of the predicted probabilities to an actual class output which can be either 0 or 1. This is used with the sigmoid activation. The current metric that I am evaluating is accuracy.</p>
                     </div>
                     <div class="left-pic-col">
-                        <img src="Photos/compile.jpg"
+                        <img src="../Photos/compile.jpg"
                             width=80%
                             margin=auto
                             display=block>
@@ -204,7 +204,7 @@
                         <p>The final step in this program is to fit the model. This is where the model is actually trained and validated. This step can take hours to complete. It will show you data for each epoch that it completes. An epoch is where each sample in the dataset has opportunities to update the internal model parameters. There are often a large number of epochs as using too little can cause your program to not be as accurate as it could be. I am currently using 50 epochs.</p>
                     </div>
                     <div class="right-pic-col">
-                        <img src="Photos/fit.jpg"
+                        <img src="../Photos/fit.jpg"
                             width=80%
                             margin=auto
                             display=block>
@@ -221,7 +221,7 @@
                 <p>It is also important to keep in mind that this field in neural networks is still a hot topic that only mostly large companies have figured out. Google has a slef-driving car that can recognize street lights, butthey used CAPATCHA testing to help train their AI. Most car companies offer driving assistance, but almost none can navigate city streets. Part of this is probably because we need to get a very accurate traffic light identification for self-driving to be used on city streets. Even in Teslas, which have more advanced driving assistance capabilites than most companies, have issues with this. Sometimes the sun in the perfect spot can be mis-identified as a yellow light. Mis-identifying lights can be very dangerous in self-driving cars because a car slowing down randomly can cause accidents.</p>
                 <p>I look forward to see how this industry grows in the future.</p>
                 <div class="pic-center">
-                    <img src="Photos/output.jpg"
+                    <img src="../Photos/output.jpg"
                         width=70%
                         margin=auto
                         display=block>
