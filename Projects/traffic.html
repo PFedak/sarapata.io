@@ -52,9 +52,9 @@
             <!-- About section -->
             <div class="main">
                 <h3>About</h3>
-                <p>The Traffic Light Identification project to satisfy Oxy&#39s comps requirement. This was part of a two semester project where the first semester was spent researching about the project and determining what we needed to learn, while the second semester was spent implenting the project.</p>
+                <p>The Traffic Light Identification project to satisfy Oxy&#39s comps requirement. This was part of a two semester project where the first semester was spent researching about the project and determining what we needed to learn, while the second semester was spent implementing the project.</p>
                 <p>In order to pass comps for the Computer Science department, we had to pick a unique project that the department chair felt was complicated enough to showcase our talents.</p>
-                <p>Originally, I was planning on only recognizing one singlar traffic light, however it was changed to indentify several that were in the same image to further complicate the project. This is intended to be a very small portion of self-driving cars that has not been solved very many times</p>
+                <p>Originally, I was planning on only recognizing one singular traffic light, however it was changed to identify several that were in the same image to further complicate the project. This is intended to be a very small portion of self-driving cars that has not been solved very many times</p>
             </div>
             <hr class="big">
             <div class="main">
@@ -68,12 +68,12 @@
                         <!-- Talking about the learning -->
                         <h4>Decision Making</h4>
                         <p>Before this project, I had never learning anything about AI. I quickly learned that the majority of AI projects were coded in Python. Since I had not worked with Python either, I needed to learn Python over the summer to be able to execute the project in the fall.</p>
-                        <p>I also needed to decide what type of artifical intelligence I was going to use. I decided to use an artifical neural network, which is intended to mimick a human&#39s nueral network. The reason why I chose to use a neural network is because they work by recognizing patterns and are commenly used in image recognition.</p>
-                        <p>Another factor I needed to decide on was which platform to use for the project. The two I looked into were PyTorch and TensorFlow. I decided touse TensorFlow, since it has better visualization techniques which allows for easier debugging. Since I never programmed a neural network, easier debugging was essential to me.</p>
+                        <p>I also needed to decide what type of artificial intelligence I was going to use. I decided to use an artificial neural network, which is intended to mimic a human&#39s neural network. The reason why I chose to use a neural network is because they work by recognizing patterns and are commonly used in image recognition.</p>
+                        <p>Another factor I needed to decide on was which platform to use for the project. The two I looked into were PyTorch and TensorFlow. I decided to use TensorFlow, since it has better visualization techniques which allows for easier debugging. Since I never programmed a neural network, easier debugging was essential to me.</p>
                         <hr class="left">
                         <!-- Describing the dataset -->
                         <h4>The Dataset</h4>
-                        <p>While researching for this project, it became very apparent that finding a large enough dataset was critcal. Although I had never worked with any for of artifical intelligence, I learned that building a neural network required as many images as possible for a more accurate network. Luckily i found a <a href="https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset">dash cam data set</a> that featured over 43,000 images and over 118,000 annotated traffic lights.</p>
+                        <p>While researching for this project, it became very apparent that finding a large enough dataset was critical. Although I had never worked with any for of artificial intelligence, I learned that building a neural network required as many images as possible for a more accurate network. Luckily i found a <a href="https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset">dash cam data set</a> that featured over 43,000 images and over 118,000 annotated traffic lights.</p>
                     </div>
                     <div class="right-pic-col" style="margin-top: 2%;">
                         <img src="../Photos/dashcam.jpg"
@@ -102,8 +102,8 @@
                 <div class="row">
                     <div class="left-text-col" style="margin-top: 2%;">
                         <h4>Image Pre-processing</h4>
-                        <p>The image pre-processing set I decided to take was to cut the images in half. Since the photos were taken from a dashcam, then the traffic lights should never be in the bottom half of the image. In order to do this, I replaced the bottom half of the images with black pixels. This step was added to cut down on training time.</p>
-                        <p>The image pre-processing step only applied to the training images because the validation images should be unedited in order to determine if the neural network truely recognizes traffic lights.</p>
+                        <p>The image pre-processing set I decided to take was to cut the images in half. Since the photos were taken from a dash-cam, then the traffic lights should never be in the bottom half of the image. In order to do this, I replaced the bottom half of the images with black pixels. This step was added to cut down on training time.</p>
+                        <p>The image pre-processing step only applied to the training images because the validation images should be unedited in order to determine if the neural network truly recognizes traffic lights.</p>
                     </div>
                     <div class="right-pic-col">
                         <img src="../Photos/dashcam-processed.jpg"
@@ -119,8 +119,8 @@
                 <div class="row">
                     <div class="right-text-col" style="margin-top: 7%;">
                         <h4>Locating Labels</h4>
-                        <p>Another step before building the model involved getting the labels from the dataset. This invloved traversing throught the correct files and getting all the annotations.</p>
-                        <p>The main setback that happened during this process was reading the csv file. Pandas has a method to read a csv file, but they usually separate the sections using commas, while this dataset was seperated by semi-colon. I made the mistake of not reading the documentation before realizing that i could set the seperation charater to a semi-colon, which made this method fairly straight-forward.</p>
+                        <p>Another step before building the model involved getting the labels from the dataset. This involved traversing through the correct files and getting all the annotations.</p>
+                        <p>The main setback that happened during this process was reading the csv file. Pandas has a method to read a csv file, but they usually separate the sections using commas, while this dataset was separated by semi-colon. I made the mistake of not reading the documentation before realizing that i could set the separation character to a semi-colon, which made this method fairly straight-forward.</p>
                     </div>
                     <div class="left-pic-col">
                         <img src="../Photos/labels.jpg"
@@ -136,7 +136,7 @@
                 <div class="row">
                     <div class="left-text-col">
                         <h4>Loading the Images</h4>
-                        <p>The final step before I could start building the model involved loading the images so that they could be used by the neural network. The way I decided to dothis was by using an ImageDataGenerator. This is a useful augmentation method because it allows us to include options that combat overfitting. This includes shifting the images slightly left/right or up/down and changing the brightness of the images. An ImageDataGenerator also allows us to split the data into training and validation sets and use our image pre-processing function.</p>
+                        <p>The final step before I could start building the model involved loading the images so that they could be used by the neural network. The way I decided to do this was by using an ImageDataGenerator. This is a useful augmentation method because it allows us to include options that combat overfitting. This includes shifting the images slightly left/right or up/down and changing the brightness of the images. An ImageDataGenerator also allows us to split the data into training and validation sets and use our image pre-processing function.</p>
                     </div>
                     <div class="right-pic-col" style="margin-top: 1%">
                         <img src="../Photos/data-gen.jpg"
@@ -152,7 +152,7 @@
                 <div class="row">
                     <div class="right-text-col" style="margin-top: 2%">
                         <h4>Setting up Data Generators</h4>
-                        <p>In order to use the images, I then used the method flow_from_dataframe. I used this method to get the images from the previous created to be used by TensorFlow. This is the step where I set up the images with the annotations. I gave the method the 6 possible annotations which are: go, stop, warning, goLeft, stopLeft, and warningLeft. This is also the step where I seperated the training generator from the validation generator.</p>
+                        <p>In order to use the images, I then used the method flow_from_dataframe. I used this method to get the images from the previous created to be used by TensorFlow. This is the step where I set up the images with the annotations. I gave the method the 6 possible annotations which are: go, stop, warning, goLeft, stopLeft, and warningLeft. This is also the step where I separated the training generator from the validation generator.</p>
                     </div>
                     <div class="left-pic-col">
                         <img src="../Photos/training-gen.jpg"
@@ -168,8 +168,8 @@
                 <div class="row">
                     <div class="left-text-col" style="margin-top: 2%;">
                         <h4>Building the Model</h4>
-                        <p>Building the model us the most important step of the entire process. This decides how the neural network thinks. Building models for neural networks are still currently being explored for optimal performance, especially for a fairly new topic like multiple traffic light indetification. For this model, I decided to use a convolutional neural network, which are designed to process pixel data. To build the model, I used two 2D convolutional layers. I followed this with a dropout layer. This helps remove noise from the network and also combats overfitting. This was followed by a max pooling layer. This layer highlights features in the images, which is commonly used after a convolutional layer. This is followed by a flatten layer and dense layer to format the output correctly. I tried to keep this network small as the more layers you add, the more likely your data is to overfit.</p>
-                        <p>The activation function is a very important piece of this method. I am using the sigmoid activation, which gives a probability for each output, and is good to use with multible labels.</p>
+                        <p>Building the model us the most important step of the entire process. This decides how the neural network thinks. Building models for neural networks are still currently being explored for optimal performance, especially for a fairly new topic like multiple traffic light identification. For this model, I decided to use a convolutional neural network, which are designed to process pixel data. To build the model, I used two 2D convolutional layers. I followed this with a dropout layer. This helps remove noise from the network and also combats overfitting. This was followed by a max pooling layer. This layer highlights features in the images, which is commonly used after a convolutional layer. This is followed by a flatten layer and dense layer to format the output correctly. I tried to keep this network small as the more layers you add, the more likely your data is to overfit.</p>
+                        <p>The activation function is a very important piece of this method. I am using the sigmoid activation, which gives a probability for each output, and is good to use with multiple labels.</p>
                     </div>
                     <div class="right-pic-col">
                         <img src="../Photos/model.jpg"
@@ -217,8 +217,8 @@
             <!-- Outcome of the neural network -->
             <div class="main">
                 <h3 style="text-align: center;">Outcome</h3>
-                <p>The final accuracy of this project was about 60% with training data and about 50% with validation data. At the beginning of the project, I was hoping to get a higher accuracy, but I am proud of where this project ended up. I had to stop working on it as I got an M1 laptop, which TensowFlow is not currently compatable with. I am glad that in the end, I was able to mostly get over overfitting as the training accuracy is not very significantly about the validation accuracy, which is something I struggled with greatly during this project.</p>
-                <p>It is also important to keep in mind that this field in neural networks is still a hot topic that only mostly large companies have figured out. Google has a slef-driving car that can recognize street lights, butthey used CAPATCHA testing to help train their AI. Most car companies offer driving assistance, but almost none can navigate city streets. Part of this is probably because we need to get a very accurate traffic light identification for self-driving to be used on city streets. Even in Teslas, which have more advanced driving assistance capabilites than most companies, have issues with this. Sometimes the sun in the perfect spot can be mis-identified as a yellow light. Mis-identifying lights can be very dangerous in self-driving cars because a car slowing down randomly can cause accidents.</p>
+                <p>The final accuracy of this project was about 60% with training data and about 50% with validation data. At the beginning of the project, I was hoping to get a higher accuracy, but I am proud of where this project ended up. I had to stop working on it as I got an M1 laptop, which TensowFlow is not currently compatible with. I am glad that in the end, I was able to mostly get over overfitting as the training accuracy is not very significantly about the validation accuracy, which is something I struggled with greatly during this project.</p>
+                <p>It is also important to keep in mind that this field in neural networks is still a hot topic that only mostly large companies have figured out. Google has a self-driving car that can recognize street lights, but they used CAPTCHA testing to help train their AI. Most car companies offer driving assistance, but almost none can navigate city streets. Part of this is probably because we need to get a very accurate traffic light identification for self-driving to be used on city streets. Even in Teslas, which have more advanced driving assistance capabilities than most companies, have issues with this. Sometimes the sun in the perfect spot can be mis-identified as a yellow light. Mis-identifying lights can be very dangerous in self-driving cars because a car slowing down randomly can cause accidents.</p>
                 <p>I look forward to see how this industry grows in the future.</p>
                 <div class="pic-center">
                     <img src="../Photos/output.jpg"

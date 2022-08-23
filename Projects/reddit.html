@@ -54,7 +54,7 @@
              <div class="main">
                  <h3>About</h3>
                  <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Languages ~ mySQL/Python/HTML/CSS/PHP</h4>
-                 <p>The reddit database is a project that was created for my databases class partnered project. To gather the data, we created a scraper on Python to extract data. The Praw class allowed us to access real data from reddit to add to our database. This project featured a mySQL relational database. There were the following tables: SUBREDDIT, USER, MODERATOR, COMMENT, POST, COMMEN_AWARD, and POST_AWARD. The subreddit and user tables were the only entities without a foreign key, while the comment table had foreign keys to the user, post, and subreddit entites.</p>
+                 <p>The reddit database is a project that was created for my databases class partnered project. To gather the data, we created a scraper on Python to extract data. The PRAW class allowed us to access real data from reddit to add to our database. This project featured a mySQL relational database. There were the following tables: SUBREDDIT, USER, MODERATOR, COMMENT, POST, COMMENT_AWARD, and POST_AWARD. The subreddit and user tables were the only entities without a foreign key, while the comment table had foreign keys to the user, post, and subreddit entities.</p>
                  <p>We decided to give our project a website to present to the class. We used PHP to connect to the database, which allowed us to query results and update tables. The website is very limited, but can interact with our database.</p>
              </div>
              <hr class="big">
@@ -65,7 +65,7 @@
                  <img src="../Photos/scraper.jpg"
                      width=650px
                      height=200px>
-                     <figcaption class="center">Subreddit Dataframe</figcaption>
+                     <figcaption class="center">Subreddit DataFrame</figcaption>
                      
                 <div class="row">
                     <div class="col-left">
@@ -80,7 +80,7 @@
                         <p>An important part of this project was having a lot of real world data. We needed enough data otherwise the more advanced queries would not have very many results. We also needed to figure out how to get real data off of reddit, as it would have taken too much time to fake it. We also needed to get this data fast as our project relied on it.</p>
                     </div>
                     <div class="col-right">
-                        <p>We searched for a way to get data off of reddit for free and found a Python module that provides simple acces to Reddit's API, PRAW. This was the perfect solution for us because we could access any real world data that reddit had itself. We had to create a fake reddit account as the wrapper needed access to a username and password and we obviously didn&#39t want to share those. It also took hours to run the code.</p>
+                        <p>We searched for a way to get data off of reddit for free and found a Python module that provides simple access to Reddit's API, PRAW. This was the perfect solution for us because we could access any real world data that reddit had itself. We had to create a fake reddit account as the wrapper needed access to a username and password and we obviously didn&#39t want to share those. It also took hours to run the code.</p>
                     </div>
                 </div>
                 <hr class="prob">
@@ -90,7 +90,7 @@
                         <p>Another large portion of our project relied on creating a usable relational database. If our our schema wasn&#39t complicated enough then our project wouldn&#39t be interesting and wouldn&#39t take enough time. We also didn&#39t want to have too large of a schema otherwise we would not have been able to handle it during the semester.</p>
                     </div>
                     <div class="col-right">
-                        <p>When we were deciding on the tables, we knew that we needed tables for subreddits, users, posts, and comments, as these are major portions of Reddit's design. For added complexity we also decided to add a table for moderators, and post/comment awards. We decided to separate the post and comments awards because there is no primary key of awards (based off of Reddit's API) so we didn&#39t want to have two foreign keys and leave one blank. We also added extra attributes for our main entites such as an upvote ratio, comment controversiality, if a user has a verified email, the score of the post, if a comment is locked, and the creation date of comments. We did not use all of the attributes that we got data for.</p>
+                        <p>When we were deciding on the tables, we knew that we needed tables for subreddits, users, posts, and comments, as these are major portions of Reddit's design. For added complexity we also decided to add a table for moderators, and post/comment awards. We decided to separate the post and comments awards because there is no primary key of awards (based off of Reddit's API) so we didn&#39t want to have two foreign keys and leave one blank. We also added extra attributes for our main entities such as an upvote ratio, comment controversiality, if a user has a verified email, the score of the post, if a comment is locked, and the creation date of comments. We did not use all of the attributes that we got data for.</p>
                     </div>
                 </div>
                 <hr class="prob">
@@ -110,7 +110,7 @@
                         <p>We also needed to decide which queries to show off in our website. Part of the class involved making queries that weren&#39t very standard or easy. We wanted to choose queries that were interesting and different for entity, but didn&#39t want to build a complicated search engine.</p>
                     </div>
                     <div class="col-right">
-                        <p>When designing our website, we chose some more fun queries to showcase, such as comparing the best or worst users. We tried to have different cababilites on each page, one example was allowing a user to delete or edit controversial comments by clicking on icons instead of buttons. We wanted to make the project as fun as possible, even though neither of us had ever programmed in HTML before.</p>
+                        <p>When designing our website, we chose some more fun queries to showcase, such as comparing the best or worst users. We tried to have different capabilities on each page, one example was allowing a user to delete or edit controversial comments by clicking on icons instead of buttons. We wanted to make the project as fun as possible, even though neither of us had ever programmed in HTML before.</p>
                     </div>
                 </div>
              </div>
@@ -151,7 +151,7 @@
                 <hr class="code">
                 <div class="row">
                     <h4 style="text-align: center; margin: 10px 0px 10px 0px;">User Page</h4>
-                    <p>The user section prompts you to create a new user or search to view the best and worst users by subreddit. Entering the search will bring youto a new page and showcases the five best and worst side by side. While the create new user pages has a form where you enter a new username, password, display name, and email.</p>
+                    <p>The user section prompts you to create a new user or search to view the best and worst users by subreddit. Entering the search will bring you to a new page and showcases the five best and worst side by side. While the create new user pages has a form where you enter a new username, password, display name, and email.</p>
                     <div class="left-pic">
                         <img src="../Photos/user-code.jpg"
                             width=95%
@@ -169,7 +169,7 @@
                 </div>                <hr class="code">
                 <div class="row">
                     <h4 style="text-align: center; margin: 10px 0px 10px 0px;">Post Page</h4>
-                    <p>The post section shows 5 hot posts from various subreddits. It shows you how many awards each post has and promts you to give one of these posts an award. You can also click on the title of the post to be escorted to the reddit page where it is located.</p>
+                    <p>The post section shows 5 hot posts from various subreddits. It shows you how many awards each post has and prompts you to give one of these posts an award. You can also click on the title of the post to be escorted to the reddit page where it is located.</p>
                     <div class="left-pic">
                         <img src="../Photos/post-code.jpg"
                             width=95%

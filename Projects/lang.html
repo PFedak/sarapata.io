@@ -81,7 +81,7 @@
                 <!-- Syntax without at explanation -->
                 <div class="syn-col-left">
                     <h4>Identifiers</h4>
-                    <p>An indentifier cannot be a keyword in Lang, i.e. it cannot be any of the following: print, var, if, else, while, func, ret, class, int, bool, or string.</p>
+                    <p>An identifier cannot be a keyword in Lang, i.e. it cannot be any of the following: print, var, if, else, while, func, ret, class, int, bool, or string.</p>
                     <hr class="syn">
                     <br style="width: .1px;">
                     <h4>Compare Operators</h4>
@@ -277,7 +277,7 @@
                 <div class="left-text-col">
                     <h4 style="margin-top: 5%;">Parse Class</h4>
                     <p>
-                        The Parse class has three protected variables, the name of the parse node, the index of the last character we parsed through, and a LinkedList of the children. It only has one constructor which initalizes name and index. There is a method to see if two parses are equal as well as normal sets and gets.
+                        The Parse class has three protected variables, the name of the parse node, the index of the last character we parsed through, and a LinkedList of the children. It only has one constructor which initializes name and index. There is a method to see if two parses are equal as well as normal sets and gets.
                     </p>
                 </div>
                 <div class="right-pic-col">
@@ -293,7 +293,7 @@
                 <div class="right-text-col">
                     <h4 style="margin-top: 5%;">Parse Subclasses</h4>
                     <p>
-                        The StatementParse and IntegerParse classes have a boolean variable to keep track if the variable is typed, as this is optional. The StatementParse class has a protected variable of a LinkedList for children. While the VariableParse class has a VariableParse variable. Both classes have the similare constructors and methods as Parse, but they also hav a toString which is used for keeping track of the tree.
+                        The StatementParse and IntegerParse classes have a boolean variable to keep track if the variable is typed, as this is optional. The StatementParse class has a protected variable of a LinkedList for children. While the VariableParse class has a VariableParse variable. Both classes have the similar constructors and methods as Parse, but they also hav a toString which is used for keeping track of the tree.
                     </p>
                 </div>
                 <div class="left-pic-col">
@@ -327,7 +327,7 @@
                 <div class="right-text-col">
                     <h4 style="margin-top: 5%;">Value Class</h4>
                     <p>
-                        The Value class has one protected variable to keep track of its name. Its only constructor initalizes name. The class can return the name or get the integer value. Value can also get the environment, indetifier, object, parameters, types, or return type. It can also add, subtract, multiply, or divide the value. Value also has an equal method using both a Value and an int as well as not equals, less than or equal to, greater than or equal to, less than, and greater than for both parameter types.
+                        The Value class has one protected variable to keep track of its name. Its only constructor initializes name. The class can return the name or get the integer value. Value can also get the environment, identifier, object, parameters, types, or return type. It can also add, subtract, multiply, or divide the value. Value also has an equal method using both a Value and an int as well as not equals, less than or equal to, greater than or equal to, less than, and greater than for both parameter types.
                     </p>
                 </div>
                 <div class="left-pic-col">
@@ -343,7 +343,7 @@
                 <div class="left-text-col">
                     <h4 style="margin-top: 13%;">Value Subclasses</h4>
                     <p>
-                        These classes are all subclasses of Value. IntegerValue has an int to keep track of the value and also has a constuctor to initalize value, get the value, and return a toString. FunctionValue also has a variable to keep track of the intermediate representation of the function, the environment, the parameters, the types, the return types, and a boolean if it has a signature. It only has a constructor and a toString. ClassValue has an itermediate representation as well as the environment and has similar methods to FunctionValue. The Location class has the variables for where the value is store and its indetifier. It only has a constructor.
+                        These classes are all subclasses of Value. IntegerValue has an int to keep track of the value and also has a constructor to initialize value, get the value, and return a toString. FunctionValue also has a variable to keep track of the intermediate representation of the function, the environment, the parameters, the types, the return types, and a boolean if it has a signature. It only has a constructor and a toString. ClassValue has an intermediate representation as well as the environment and has similar methods to FunctionValue. The Location class has the variables for where the value is store and its identifier. It only has a constructor.
                     </p>
                 </div>
                 <div class="right-pic-col">
@@ -442,7 +442,7 @@
                 <div class="row">
                     <h4>Order of Operations</h4>
                     <div class="test-text">
-                        <p># This is testing order of operationns and making sure that the division is done before subtraction <br>
+                        <p># This is testing order of operations and making sure that the division is done before subtraction <br>
                         print 2 + 16 - 8 / 2;</p>
                     </div>
                     <div class="test-tree">
@@ -579,7 +579,7 @@
                             width=80%
                             margin=auto
                             display=block>
-                            <figcaption class="center">Correct Output: 1 \n 2 \n 4 \n 5 \n</figcaption>
+                            <figcaption class="center">Correct Output: 1\n 2\n 4\n 5\n</figcaption>
                     </div>
                 </div>
             </div>
